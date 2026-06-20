@@ -1,5 +1,11 @@
 # Awesome Deep Learning Latency Attacks &amp; Defenses [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](./LICENSE)
 
+<p align="center">
+  <a href="https://guzonghua.github.io/awesome-latency-attacks/">
+    <img src="https://img.shields.io/badge/%F0%9F%8C%90_View_the_Interactive_Site-20808D?style=for-the-badge" alt="View the interactive site" height="34">
+  </a>
+</p>
+
 A curated, continuously updated collection of papers on **deep learning latency, energy-latency, and timing (availability) attacks and defenses** — spanning object detection and autonomous-driving perception, dynamic/adaptive networks, transformers, and large language &amp; vision-language models (LLMs/VLMs).
 
 This is the companion resource for the survey *“Deep Learning Latency Attacks and Defenses: A Survey from Object Detection to Large Language and Vision-Language Models.”* It currently indexes **76 works** (45 inference-stage attacks, 10 training-stage attacks, 21 defenses).
