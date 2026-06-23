@@ -6,11 +6,11 @@
   </a>
 </p>
 
-A curated, continuously updated collection of papers on **deep learning latency, energy-latency, and timing (availability) attacks and defenses** — spanning object detection and autonomous-driving perception, dynamic/adaptive networks, transformers, and large language &amp; vision-language models (LLMs/VLMs).
+This repository is maintained as a companion resource for the survey *“Deep Learning Latency Attacks and Defenses: A Survey from Object Detection to Large Language and Vision-Language Models.”* It indexes papers, code links, taxonomy notes, and figures on latency-oriented availability threats in deployed AI systems.
 
-This is the companion resource for the survey *“Deep Learning Latency Attacks and Defenses: A Survey from Object Detection to Large Language and Vision-Language Models.”* It currently indexes **76 works** (45 inference-stage attacks, 10 training-stage attacks, 21 defenses).
+The list focuses on attacks and defenses that affect inference-time or system-level cost — latency, energy, throughput pressure, and deadline misses — rather than attacks that only change model predictions. It currently includes **76 works** (45 inference-stage attacks, 10 training-stage attacks, 21 defenses).
 
-> 🔎 Prefer a searchable, filterable view? Open the **[interactive table on GitHub Pages](https://guzonghua.github.io/awesome-latency-attacks/)**.
+> Search and filter the catalog in the **[interactive table on GitHub Pages](https://guzonghua.github.io/awesome-latency-attacks/)**.
 
 **Table of Contents**
 - [Overview](#overview)
@@ -26,15 +26,15 @@ This is the companion resource for the survey *“Deep Learning Latency Attacks 
 
 ## Overview
 
-<div align="center"><img src="./assets/overview.jpg" width="95%" /></div>
+<div align="center"><img src="./assets/overview_system_availability.png" width="95%" /></div>
 
-Latency attacks are **availability** attacks: rather than corrupting a prediction, the adversary inflates the inference-time computation, energy, or wall-clock latency of a model so a real-time consumer (a vehicle controller, an interactive service, a battery-powered sensor) misses its deadline or exhausts its resources — often while the prediction itself remains nominally correct.
+The overview frames latency attacks as system-level **availability** threats against budgeted AI pipelines. It connects deployed AI systems, attack-exploited bottlenecks, intermediate-work amplification, system-level failures, and defense control points.
 
 ## Unifying Mechanism
 
 <div align="center"><img src="./assets/mechanism.png" width="92%" /></div>
 
-Every attack family below shares one mechanism we call **intermediate-work amplification**: the adversary forces some downstream stage (NMS, self-attention, autoregressive decoding, expert routing) to process *more* intermediate objects, tokens, or steps than a benign input would generate. Because those stages have **super-linear worst-case complexity**, a modest increase in count produces a disproportionate cost increase. The natural cross-domain defense is a **work budget** — an enforced cap on intermediate objects/tokens per unit time.
+The mechanism figure focuses on **intermediate-work amplification**. Many latency attacks force a downstream stage, such as NMS, self-attention, autoregressive decoding, or expert routing, to process more intermediate objects, tokens, or steps than a benign input would generate. Because these stages can have super-linear worst-case cost, a modest increase in intermediate work can produce a disproportionate latency or energy increase. A common defense pattern is to enforce a **work budget** on intermediate objects or tokens.
 
 ---
 
@@ -137,26 +137,26 @@ Every attack family below shares one mechanism we call **intermediate-work ampli
 
 ## Paper
 
-The full survey manuscript (LaTeX source + compiled PDF) lives in [`/paper`](./paper):
+The survey manuscript source and compiled PDF are included in [`/paper`](./paper):
 
-- [`survey.pdf`](./paper/survey.pdf) — compiled manuscript (ACM Computing Surveys format).
-- [`survey.tex`](./paper/survey.tex), [`references.bib`](./paper/references.bib), [`appendix_tables.tex`](./paper/appendix_tables.tex) — source. The appendix tables are generated from [`assets/catalog.json`](./assets/catalog.json) via `gen_tables.py`.
+- [`survey.pdf`](./paper/survey.pdf) — compiled manuscript in ACM Computing Surveys format.
+- [`survey.tex`](./paper/survey.tex), [`references.bib`](./paper/references.bib), [`appendix_tables.tex`](./paper/appendix_tables.tex) — source files. The appendix tables are derived from [`assets/catalog.json`](./assets/catalog.json) via `gen_tables.py`.
 
-To rebuild: `cd paper && pdflatex survey && bibtex survey && pdflatex survey && pdflatex survey`.
+To rebuild the manuscript locally: `cd paper && pdflatex survey && bibtex survey && pdflatex survey && pdflatex survey`.
 
 ---
 
 ## How to Contribute
 
-Contributions are welcome! To add a paper:
+Issues and pull requests are welcome for new papers, corrected metadata, and broken links.
 
-1. Fork the repo and edit [`assets/catalog.json`](./assets/catalog.json) — add an entry to `inference_attacks`, `training_attacks`, or `defenses`.
-2. Run `python gen_site.py` to regenerate `README.md` and `index.html` from the catalog (single source of truth).
-3. Open a pull request.
+1. Edit [`assets/catalog.json`](./assets/catalog.json), adding the entry to `inference_attacks`, `training_attacks`, or `defenses`.
+2. Run `python3 gen_site.py` to regenerate the README tables from the catalog. The interactive site reads `assets/catalog.json` directly.
+3. Open a pull request with a short note on the paper or correction.
 
-Each entry should include: `name`, `venue`, `year`, `target`, `app` (domain), `setting` (or `type` for defenses), `paper` URL, and `code` URL (leave `""` if none).
+Each entry should include `name`, `venue`, `year`, `target`, `app` (domain), `setting` (or `type` for defenses), `paper`, `code`, and `cite`. Use official author-maintained code repositories or official project pages when available. If only a third-party reproduction exists, mark it clearly rather than listing it as official code.
 
-Please keep entries to **peer-reviewed or arXiv-hosted** works with verifiable links, and preserve chronological ordering by year.
+Please keep entries to peer-reviewed or arXiv-hosted works with verifiable links, and preserve the current category structure.
 
 ---
 
@@ -176,4 +176,4 @@ If you find this resource useful, please cite the survey:
 
 ---
 
-*Legend:* ✘ = no public code located. Found a broken link or missing paper? [Open an issue](../../issues).
+*Legend:* ✘ = no public code located. Code links are included when an official repository or project page has been identified. Found a broken link or missing paper? [Open an issue](../../issues).
