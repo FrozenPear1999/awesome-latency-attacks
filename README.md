@@ -53,7 +53,7 @@ Every attack family below shares one mechanism we call **intermediate-work ampli
 | LLMEffiChecker | ACM TOSEM (2022) | LLMs | NLP | Black & white box | [paper](https://arxiv.org/abs/2210.03696) | [GitHub](https://github.com/Cap-Ning/LLMEffiChecker) |
 | NICGSlowDown | CVPR (2022) | Decoder-based image captioning | CV | White box | [paper](https://arxiv.org/abs/2203.15859) | [GitHub](https://github.com/SeekingDream/CVPR22_NICGSlowDown) |
 | SAME | ACL (2023) | Multi-exit transformers | NLP | White box | [paper](https://arxiv.org/abs/2305.12228) | [GitHub](https://github.com/MatthewCYM/SAME) |
-| SlowBERT | ACL Findings (2023) | Multi-exit BERT | NLP | White box | [paper](https://aclanthology.org/2023.findings-acl.602/) | ✘ |
+| SlowBERT | ACL Findings (2023) | Multi-exit BERT | NLP | White box | [paper](https://aclanthology.org/2023.findings-acl.634/) | ✘ |
 | No-Skim | arXiv (2023) | Skimming language models | NLP | Black & white box | [paper](https://arxiv.org/abs/2312.09494) | ✘ |
 | Phantom Sponges | WACV (2023) | Object detection (NMS) | CV / AD | White box | [paper](https://arxiv.org/abs/2205.13618) | [GitHub](https://github.com/AvishagS422/PhantomSponges) |
 | SlowLiDAR | CVPR (2023) | 3D LiDAR detection | CV / AD | White box | [paper](https://openaccess.thecvf.com/content/CVPR2023/papers/Liu_SlowLiDAR_Increasing_the_Latency_of_LiDAR-Based_Detection_Using_Adversarial_Examples_CVPR_2023_paper.pdf) | [GitHub](https://github.com/WUSTL-CSPL/SlowLiDAR) |
@@ -67,14 +67,14 @@ Every attack family below shares one mechanism we call **intermediate-work ampli
 | Steal Now Attack Later | arXiv (2024) | Object detection | CV | Black box | [paper](https://arxiv.org/abs/2404.15881) | ✘ |
 | Energy Attack (multi-exit) | Info. & Software Tech. (2024) | Adaptive multi-exit networks | CV | Grey box | [paper](https://doi.org/10.1016/j.infsof.2024.107653) | ✘ |
 | Slowdown Causes (SaTML) | IEEE SaTML (2024) | Language models | NLP | White box | [paper](https://arxiv.org/abs/2305.18926) | ✘ |
-| Engorgio | arXiv (2024) | LLMs (output inflation) | NLP | White box + transfer | [paper](https://arxiv.org/abs/2412.19394) | ✘ |
+| Engorgio | arXiv (2024) | LLMs (output inflation) | NLP | White box + transfer | [paper](https://arxiv.org/abs/2412.19394) | [GitHub](https://github.com/jianshuod/Engorgio-prompt) |
 | Verbose Images | ICLR (2024) | Large VLMs | CV+NLP | White box | [paper](https://arxiv.org/abs/2401.11170) | [GitHub](https://github.com/KuofengGao/Verbose_Images) |
 | Uniform Inputs | IEEE SPW (2024) | CNNs (sparsity) | CV | Black box | [paper](https://arxiv.org/abs/2403.18587) | [GitHub](https://github.com/and-mill/2024-sponge-example-analysis) |
 | DetStorm | IEEE S&P (2025) | Camera perception | AD | White box (physical) | [paper](https://doi.org/10.1109/SP61157.2025.00236) | ✘ |
 | Inference-Time Impact Analysis | arXiv (2025) | Full perception (sim.) | AD | Simulation | [paper](https://arxiv.org/abs/2505.03850) | ✘ |
 | DDLS Efficiency Attacks | arXiv (2025) | Early-exit / token-pruning / MoE | CV & NLP | White & black box | [paper](https://arxiv.org/abs/2506.17621) | ✘ |
 | TTSlow | IEEE TASLP (2025) | Auto-regressive TTS | Speech | White box | [paper](https://arxiv.org/abs/2407.01927) | ✘ |
-| Crabs | ACL Findings (2025) | LLMs (DoS) | NLP | Black box | [paper](https://arxiv.org/abs/2412.13879) | ✘ |
+| Crabs | ACL Findings (2025) | LLMs (DoS) | NLP | Black box | [paper](https://arxiv.org/abs/2412.13879) | [GitHub](https://github.com/shuita2333/AutoDoS) |
 | VLMInferSlow | ACL (2025) | VLMs-as-a-service | CV+NLP | Black box | [paper](https://aclanthology.org/2025.acl-long.encyclopedia/) | ✘ |
 | Verbose-Text Induction | arXiv (2025) | VLMs | CV+NLP | White box | [paper](https://arxiv.org/abs/2511.16163) | ✘ |
 | LingoLoop | arXiv (2025) | Multimodal LLMs | CV+NLP | White box | [paper](https://arxiv.org/abs/2506.14493) | ✘ |
@@ -100,7 +100,7 @@ Every attack family below shares one mechanism we call **intermediate-work ampli
 | SkipSponge | arXiv (2024) | CNNs, GANs (weights) | CV | Full control | [paper](https://arxiv.org/abs/2402.06357) | ✘ |
 | Huang et al. (multi-exit) | IEEE Access (2024) | Multi-exit CNNs | CV | Full control | [paper](https://doi.org/10.1109/ACCESS.2024.3370849) | ✘ |
 | Sponge Backdoor (OD) | IJCNN (2024) | Object detection (NMS) | CV / AD | Backdoor | [paper](https://doi.org/10.1109/IJCNN60899.2024.10650435) | ✘ |
-| DoS Poisoning (LLM) | arXiv (2024) | LLMs (no-EOS) | NLP | Backdoor / poisoning | [paper](https://arxiv.org/abs/2410.10760) | ✘ |
+| DoS Poisoning (LLM) | arXiv (2024) | LLMs (no-EOS) | NLP | Backdoor / poisoning | [paper](https://arxiv.org/abs/2410.10760) | [GitHub](https://github.com/sail-sg/P-DoS) |
 | Sensing-AI Sponge | IEEE GLOBECOM (2025) | Sensing DNNs (IoT) | Sensing | Partial control | [paper](https://doi.org/10.1109/GLOBECOM59602.2025.11432163) | ✘ |
 | EvoWeight (FPGA) | IEEE HOST (2025) | FPGA DNN accelerators | CV | Full control | [paper](https://doi.org/10.1109/HOST64725.2025.11050058) | ✘ |
 | Reflection Backdoor (VLM-AD) | arXiv (2025) | Driving VLM planner | AD | Backdoor (physical trigger) | [paper](https://arxiv.org/abs/2505.06413) | ✘ |
@@ -122,7 +122,7 @@ Every attack family below shares one mechanism we call **intermediate-work ampli
 | Sparsity Monitor | IEEE SPW (2024) | CNNs | Runtime monitoring | CV | [paper](https://arxiv.org/abs/2403.18587) | [GitHub](https://github.com/and-mill/2024-sponge-example-analysis) |
 | Garrison | ACM/IEEE DAC (2024) | Ensemble inference (GPU) | System / serving control | CV | [paper](https://doi.org/10.1145/3649329.3654810) | ✘ |
 | Time-Traveling Defense | arXiv (2024) | Traffic-sign classifiers | Temporal redundancy | AD | [paper](https://arxiv.org/abs/2410.08338) | ✘ |
-| Can't Slow Me Down | CVPR (2025) | Edge object detectors | Robust/adaptive training | AD | [paper](https://doi.org/10.1109/CVPR52734.2025.01791) | ✘ |
+| Can't Slow Me Down | CVPR (2025) | Edge object detectors | Robust/adaptive training | AD | [paper](https://doi.org/10.1109/CVPR52734.2025.01791) | [GitHub](https://github.com/Hill-Wu1998/underload) |
 | DCT Patch Elimination | IEEE RCAR (2025) | Object detection | Input transformation | AD | [paper](https://doi.org/10.1109/RCAR65431.2025.11139457) | ✘ |
 | Real-Time LiDAR Defense | ACM CCS (2025) | LiDAR detection | Runtime monitoring | AD | [paper](https://doi.org/10.1145/3719027.3765227) | ✘ |
 | LDP Purification | IEEE TrustCom (2025) | VLM visual encoders | Input purification | CV+NLP | [paper](https://doi.org/10.1109/Trustcom66490.2025.00065) | ✘ |
